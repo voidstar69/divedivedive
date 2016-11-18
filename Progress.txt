@@ -1,0 +1,57 @@
+Ludum Dare 48h compo #29
+------------------------
+Total time = 12 hours
+
+26/04/2014 (8 hours)
+----------
+06:15 to
+07:15   Anna and I woke up, and started brainstorming in bed.
+08:00   We got out of bed and ate breakfast. I watched the Unity sprite tutorial and looked at other Ludum Dare dev's progress.
+08:30   Got first sprite moving on-screen under keyboard control.
+09:30   Enemy sprite follows player sprite. Display text on screen. Log to console. Added project to SVN.
+09:30 to
+12:30   Hill running, shower & lunch
+13:00   Listened to some Ludum Dare YouTube videos.
+13:20   Got player to follow mouse instead of via arrow keys.
+13:20 to
+14:50   Had a nap, brainstormed, had a coffee.
+15:30   Mucked about with Unity 2D colliders. They appear not to work!
+15:45   Got player to collide with collectible, which then destroys the collectible.
+16:15   Created a prefab for collectibles. When player collects one, another is created from the prefab.
+16:45 to
+17:00   Chatted to Anna about her work
+17:10   New collectibles are always created within a 2D rectangle defined by a (disabled) BoxCollider2D. This allows easy customisation of the spawn area.
+17:10 to
+17:50   Saved all work to SVN (including Scene!), restarted PC for anti-virus, mucked about with new cheap Android tablet.
+19:15   Created a box to represent the air/sky. The player has only limited air, and must return to the surface to get more air, otherwise they die. Tried to stop the player flying through the air!
+19:15 to
+20:00   Had dinner
+20:25   Prevented the player from flying through air. Instead the player bobs at the surface of the water.
+20:50 to
+21:10   Showed game to Anna and discussed game artwork.
+22:10   Added bar showing level of oxygen, which refills slowly when player at surface. Spawn more collectibles only when player has picked some up.
+22:50   Took Anna's artwork, made sprites have transparent backgrounds, published game to DropBox but couldn't be bothered to post to the Ludum Dare website.
+
+27/04/2014 (4 hours)
+----------
+08:30 to
+09:00   Looked at other LD entries similar to my game.
+09:30   Generated some basic sound effects using bfxr and basic music using Otomata.
+10:30   Got looping music and a few sound effects into the game.
+10:30 to
+12:00   Walked Anna to Cutty Sark DLR and bought a brownie and latte from Rhodes
+13:00   Added missiles that move back and forth horizontally.
+13:15   Made missile and bad bombs have transparent backgrounds.
+13:15 to
+15:30   Ate lunch. Played with new tablet. Played FTL until I died. Mucked about.
+16:00   Made oxygen bar thicker, and wrote text on it to make it clear what it stands for. Unity crashed.
+16:30   When player dies, missiles and collectibles are respawned at random locations.
+16:30 to
+20:00   Cleaned bike with Anna, had dinner and walked to Comedy club.
+23:00   Watched standup comedy and caught a bus home.
+23:15   Made the final build of the game.
+
+01/05/2014
+----------
+21:00 to
+21:30   Created more screenshots and some icons, and submitted game to onegameamonth.com

@@ -1,2 +1,3 @@
-# divedivedive
-A Unity game made for Ludum Dare #29: a Submarine game
+# Dive Dive Dive!
+A Submarine game made in Unity, for the web.
+Made in 48 hours for Ludum Dare game compo #29.

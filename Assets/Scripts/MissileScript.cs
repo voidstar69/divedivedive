@@ -13,10 +13,10 @@ public class MissileScript : MonoBehaviour {
 	void Update () {
 		// move missile back and forth along a horizontal path
 		int dir = (transform.position.x > 0 ? -1 : +1);
-		GetComponent<Rigidbody2D>().AddForce(new Vector2(moveForce * dir, 0));
+		rigidbody2D.AddForce(new Vector2(moveForce * dir, 0));
 
 		// ensure missile faces correct direction
-		if(GetComponent<Rigidbody2D>().velocity.x > 0)
+		if(rigidbody2D.velocity.x > 0)
 			transform.localScale = new Vector2(Mathf.Abs(transform.localScale.x), transform.localScale.y);
 		else
 			transform.localScale = new Vector2(-Mathf.Abs(transform.localScale.x), transform.localScale.y);

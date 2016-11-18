@@ -62,14 +62,14 @@ public class PlayerScript : MonoBehaviour {
 			Destroy(other.gameObject);
 			numItemsExist--;
 			numItemsCollected++;
-			GetComponent<AudioSource>().PlayOneShot(itemPickupSound);
+			audio.PlayOneShot(itemPickupSound);
 		}
 		else if(other.CompareTag("Missile"))
 		{
 			// destroy missile and player
 			Destroy(other.gameObject);
 			ResetGame();
-			GetComponent<AudioSource>().PlayOneShot(refillAirSound);
+			audio.PlayOneShot(refillAirSound);
 		}
 		else if(other.CompareTag("Air"))
 		{
@@ -100,8 +100,8 @@ public class PlayerScript : MonoBehaviour {
 
 	private void SpawnCollectible()
 	{
-		Vector2 min = spawnBox.offset - spawnBox.size * 0.5f;
-		Vector2 max = spawnBox.offset + spawnBox.size * 0.5f;
+		Vector2 min = spawnBox.center - spawnBox.size * 0.5f;
+		Vector2 max = spawnBox.center + spawnBox.size * 0.5f;
 		var pos = new Vector3(Random.Range(min.x, max.x), Random.Range(min.y, max.y), 0);
 		var item = Instantiate(collectiblePrefab, pos, Quaternion.identity);
 		items.Add(item);
@@ -110,8 +110,8 @@ public class PlayerScript : MonoBehaviour {
 
 	private void SpawnMissile()
 	{
-		Vector2 min = spawnBox.offset - spawnBox.size * 0.5f;
-		Vector2 max = spawnBox.offset + spawnBox.size * 0.5f;
+		Vector2 min = spawnBox.center - spawnBox.size * 0.5f;
+		Vector2 max = spawnBox.center + spawnBox.size * 0.5f;
 		var pos = new Vector3(Random.Range(min.x, max.x), Random.Range(min.y, max.y), 0);
 		var item = Instantiate(missilePrefab, pos, Quaternion.identity);
 		items.Add(item);
@@ -122,7 +122,7 @@ public class PlayerScript : MonoBehaviour {
 		oxygenTimeLeft = oxygenCapacity;
 
 		// move player to near surface
-		transform.position = new Vector2(spawnBox.offset.x, spawnBox.offset.y + spawnBox.size.y / 2);
+		transform.position = new Vector2(spawnBox.center.x, spawnBox.center.y + spawnBox.size.y / 2);
 
 		// destroy all collectibles and missiles
 		foreach(var item in items)
@@ -139,7 +139,7 @@ public class PlayerScript : MonoBehaviour {
 		for(int i = 0; i < maxMissiles; i++)
 			SpawnMissile();
 
-		GetComponent<AudioSource>().PlayOneShot(itemPickupSound);
-		GetComponent<AudioSource>().PlayOneShot(refillAirSound);
+		audio.PlayOneShot(itemPickupSound);
+		audio.PlayOneShot(refillAirSound);
 	}
 }
